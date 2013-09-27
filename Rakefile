@@ -67,6 +67,7 @@ spec = Gem::Specification.new do |s|
   #### Dependencies and requirements.
 
   s.add_dependency('fast-stemmer', '>= 1.0.0')
+  s.add_dependency('oj', '>= 2.1.4')
   s.requirements << "A porter-stemmer module to split word stems."
 
   #### Author and project details.

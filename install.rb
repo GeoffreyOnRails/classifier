@@ -37,7 +37,7 @@ end
 files = FileList["**/*"]
 
 # File::safe_unlink *deprecated.collect{|f| File.join($sitedir, f.split(/\//))}
-files.each {|f| 
+files.each {|f|
   File::install(f, File.join($sitedir, *f.split(/\//)), 0644, true)
 }
 
@@ -46,5 +46,13 @@ begin
 rescue LoadError
   puts
   puts "Please install Stemmer from http://rubyforge.org/projects/stemmer or via 'gem install stemmer'"
+  puts
+end
+
+begin
+  require 'oj'
+rescue LoadError
+  puts
+  puts "Please install Oj via gem install oj"
   puts
 end
